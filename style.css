@@ -1,0 +1,396 @@
+/* Global reset */{
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  background: #0a0a0a;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  overflow-x: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* 🔮 Glow background */
+.bg-glow {
+  position: fixed;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, #7f5af0, transparent 70%);
+  filter: blur(150px);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+/* 💻 Hero */
+.hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 🔥 Name */
+.name {
+  font-size: 4rem;
+  background: linear-gradient(90deg, #7f5af0, #2cb67d);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+/* ⚡ Role */
+.role {
+  font-size: 1.5rem;
+  opacity: 0.8;
+}
+
+/* 💬 Tagline */
+.tagline {
+  margin-top: 10px;
+  opacity: 0.6;
+}
+
+/* 🎛 Buttons */
+.buttons {
+  margin-top: 30px;
+}
+
+button {
+  padding: 12px 20px;
+  margin: 10px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  background: linear-gradient(90deg, #7f5af0, #2cb67d);
+  color: white;
+  transition: all 0.25s ease;
+}
+
+button:hover {
+  transform: scale(1.08);
+  filter: brightness(1.1);
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+/* Outline button */
+.outline {
+  background: transparent;
+  border: 1px solid #7f5af0;
+}
+
+section {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 🔥 Section title */
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+/* 🧱 Grid */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  width: 80%;
+}
+
+/* 💎 Card */
+.project-card {
+  position: relative;
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(15px);
+  border-radius: 16px;
+  padding: 20px;
+  transition: all 0.4s ease;
+}
+
+/* ✨ Glow border */
+.project-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 20px;
+  padding: 2px;
+  background: linear-gradient(90deg, #7f5af0, #2cb67d);
+  -webkit-mask: linear-gradient(#000 0 0) content-box, 
+                linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+}
+
+/* 😈 Hover effect */
+.project-card:hover {
+  transform: translateY(-12px) scale(1.03);
+  box-shadow: 
+    0 10px 30px rgba(127,90,240,0.3),
+    0 0 20px rgba(127,90,240,0.4);
+}
+
+/* 🔘 Buttons */
+.card-buttons {
+  margin-top: 20px;
+}
+
+.card-buttons a {
+  text-decoration: none;
+  padding: 8px 12px;
+  margin-right: 10px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  background: #7f5af0;
+  color: white;
+  transition: 0.3s;
+}
+
+.card-buttons a:hover {
+  background: #2cb67d;
+}
+
+/* 🧠 Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;       
+  right: 0;
+  
+  padding: 15px 40px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background: rgba(0,0,0,0.3);
+  backdrop-filter: blur(10px);
+  z-index: 100;
+
+   max-width: 100vw;     
+}
+
+.navbar {
+  padding: 15px 25px;
+}
+
+.navbar {
+  transition: all 0.3s ease;
+}
+
+.navbar:hover {
+  background: rgba(0,0,0,0.5);
+}
+
+/* Logo */
+.logo {
+  font-size: 1.2rem;
+  color: #7f5af0;
+}
+.nav-links {
+  margin-right: 20px;
+}
+
+/* Links */
+.nav-links a {
+  margin-left: 12px;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+  flex-wrap: nowrap;
+  overflow: hidden;      
+}
+
+.nav-links a:hover {
+  color: #2cb67d;
+}
+
+/* ✨ Hidden state */
+.hidden {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.6s ease;
+}
+
+/* 🔥 Visible */
+.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.cursor-glow {
+  position: fixed;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, #7f5af0, transparent 70%);
+  pointer-events: none;
+  border-radius: 50%;
+  filter: blur(100px);
+  z-index: 0;
+  transform: translate(-50%, -50%);
+}
+
+.particles {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.particles span {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  background: white;
+  opacity: 0.5;
+  border-radius: 50%;
+  animation: floatParticles 10s linear infinite;
+}
+
+@keyframes floatParticles {
+  from {
+    transform: translateY(100vh);
+  }
+  to {
+    transform: translateY(-10vh);
+  }
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  width: 350px;
+  gap: 12px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  background: rgba(255,255,255,0.1);
+  color: white;
+  backdrop-filter: blur(10px);
+}
+
+.contact-form textarea {
+  min-height: 100px;
+  resize: none;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  box-shadow: 0 0 10px #7f5af0;
+}
+
+.typing {
+  border-right: 2px solid #7f5af0;
+  white-space: nowrap;
+  overflow: hidden;
+  display: inline-block;
+}
+
+#loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+h1, h2, h3 {
+  letter-spacing: 0.5px;
+}
+
+p {
+  line-height: 1.6;
+}
+
+.project-card,
+button,
+.nav-links a {
+  will-change: transform;
+}
+
+.profile-pic {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #7f5af0;
+  box-shadow: 0 0 25px #7f5af0;
+  margin-bottom: 20px;
+  transition: 0.3s;
+}
+
+.profile-pic:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 40px #2cb67d;
+}
+
+.trail {
+  position: fixed;
+  width: 10px;
+  height: 10px;
+  background: #7f5af0;
+  border-radius: 50%;
+  pointer-events: none;
+  opacity: 0.6;
+  z-index: 999;
+  filter: blur(6px);
+}
+
+html, body {
+  overflow-x: hidden;
+}
+
+.more-projects {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.more-projects a {
+  text-decoration: none;
+  color: #7f5af0;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.more-projects a:hover {
+  color: #2cb67d;
+}
+
+.profile-pic {
+  animation: pulseGlow 2s infinite alternate;
+}
+
+@keyframes pulseGlow {
+  from {
+    box-shadow: 0 0 20px #7f5af0;
+  }
+  to {
+    box-shadow: 0 0 40px #2cb67d;
+  }
+}
