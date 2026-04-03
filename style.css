@@ -8,9 +8,14 @@ body {
   font-family: 'Poppins', sans-serif;
   overflow-x: hidden;
 }
-
 html {
   scroll-behavior: smooth;
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
 /* 🔮 Glow background */
@@ -117,6 +122,16 @@ section {
   border-radius: 16px;
   padding: 20px;
   transition: all 0.4s ease;
+}
+
+.project-card {
+  position: relative;
+  z-index: 2;
+}
+
+.card-buttons a {
+  position: relative;
+  z-index: 5;
 }
 
 /* ✨ Glow border */
@@ -393,4 +408,39 @@ html, body {
   to {
     box-shadow: 0 0 40px #2cb67d;
   }
+}
+
+.bg-glow,
+.particles,
+.cursor-glow {
+  pointer-events: none;
+  z-index: -1;
+}
+
+.project-img {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 15px;
+  opacity: 0.8;
+  transition: 0.4s ease;
+}
+
+.project-card:hover .project-img {
+  transform: scale(1.05);
+  opacity: 1;
+  box-shadow: 0 0 25px #7f5af0;
+}
+
+.project-card {
+  transition: transform 0.2s ease;
+  transform-style: preserve-3d;
+  cursor: pointer;
+}
+
+.card-buttons a {
+  transition: 0.3s;
+}
+
+.card-buttons a:hover {
+  transform: translateY(-3px) scale(1.05);
 }
