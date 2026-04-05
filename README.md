@@ -1,6 +1,6 @@
 # 🌐 Anushka's Portfolio
 
-Welcome to my personal portfolio website,
+Welcome to my personal portfolio website, built to showcase my projects, skills, and design style.
 
 🚀 Live Demo: https://anushka-s-portfolio-zeta.vercel.app/
 
@@ -8,7 +8,7 @@ Welcome to my personal portfolio website,
 
 ## 💫 About This Project
 
-This is my personal portfolio website built to showcase my projects, skills, and design style.
+I am passionate about building real-world web applications and creating clean, aesthetic, and user-friendly interfaces. This portfolio highlights my work, including API-based projects and modern UI designs.
 
 ✨ Focus:
 - Clean UI/UX
